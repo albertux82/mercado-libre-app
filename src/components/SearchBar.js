@@ -1,12 +1,11 @@
 import { useForm } from "../hooks/useForm";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import queryString from 'query-string';
+import queryString from "query-string";
 
 export const SearchBar = () => {
-
   const location = useLocation();
-  const { search = '' } = queryString.parse( location.search );
+  const { search = "" } = queryString.parse(location.search);
   const history = createBrowserHistory({ window });
   const navigate = useNavigate();
 
@@ -40,10 +39,14 @@ export const SearchBar = () => {
                   aria-label="Search"
                   autoComplete="off"
                   name="searchText"
-                  // value={searchText}
+                  value={searchText}
                   onChange={handleInputChange}
                 ></input>
-                <button type="submit" className="btn- btn-search" title="Buscar">
+                <button
+                  type="submit"
+                  className="btn- btn-search"
+                  title="Buscar"
+                >
                   <img
                     src="../assets/images/ic_Search.png"
                     alt="icon-search"

@@ -6,23 +6,21 @@ export const ProductItem = (product) => {
   return (
     <>
         <li>
-
-          <div className="item-wrapper">
+          <div className="wrapper">
             <div className="item d-block d-sm-flex">
-              {/* Imagen */}
+              {/* Image */}
               <div className="image text-center hover01 column">
                 <div>
-
-                <Link to={`../items/${product.item.id}`} title={product.item.title}>
-                  <figure>
-                    <img
-                      src={product.item.picture}
-                      alt={product.item.title}
-                      width={180}
-                      height={180}
-                    ></img>
-                  </figure>
-                </Link>
+                  <Link to={`../items/${product.item.id}`} title={product.item.title}>
+                    <figure>
+                      <img
+                        src={product.item.picture}
+                        alt={product.item.title}
+                        width={180}
+                        height={180}
+                      ></img>
+                    </figure>
+                  </Link>
                 </div>
               </div>
 
@@ -61,9 +59,7 @@ export const ProductItem = (product) => {
 
             </div>
           </div>
-
-        </li>
-      
+        </li>      
     </>
   );
 };
