@@ -1,0 +1,50 @@
+@import "/src/css/variables.css";
+
+body {
+  background-color: var(--main-bg-color);
+  font-size: 18px;
+  color: var(--text-color);
+  font-family: -apple-system, Helvetica Neue, Helvetica, Roboto,
+    Arial, sans-serif;
+}
+
+.container {
+  max-width: 1120px;
+}
+
+ol.breadcrumb li {
+  display: inline-block;
+}
+
+.text-14 {
+  font-size: 14px;
+}
+.text-24 {
+  font-size: 24px;
+  line-height: 34px;
+}
+.text-46 {
+  font-size: 46px;
+  line-height: 54px;
+}
+
+/* SearchBar */
+.searchBar {
+  background-color: var(--yellow);
+}
+.btn-search {
+  background-color: var(--main-bg-color);
+  border: none;
+  padding: 0px 10px;
+}
+
+.input-search{
+  border-radius:2px;
+  border:none;
+  padding:10px
+}
+.input-search::placeholder {
+  color: var(--gray9);
+  opacity: 1;
+  font-size: 18px;
+}
