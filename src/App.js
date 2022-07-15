@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { HomePage} from "./pages";
+import { HomePage} from './pages/HomePage';
 import { SearchBar, ProductsList, ProductDetail} from './components';
-
+import './App.scss';
 
 export const App = () => {
   return (
     <>
-      <React.StrictMode>
+      {/* <React.StrictMode> */}
       <BrowserRouter>
         <SearchBar></SearchBar>
 
@@ -23,7 +23,7 @@ export const App = () => {
           </div>
         </section>
       </BrowserRouter>
-      </React.StrictMode>
+      {/* </React.StrictMode> */}
     </>
   );
 };

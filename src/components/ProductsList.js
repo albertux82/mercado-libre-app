@@ -3,9 +3,11 @@ import queryString from "query-string";
 import { useFetchProducts } from "../hooks";
 import { ProductItem } from "../components";
 
-export const ProductsList = (props) => {
+export const ProductsList = () => {
   const location = useLocation();
   const { search = "" } = queryString.parse(location.search);
+
+  //Obtenemos el término de búsqueda desde la url para hacer la petición
   const { products, isLoading } = useFetchProducts(search);
 
   return (
@@ -16,6 +18,7 @@ export const ProductsList = (props) => {
             <i className="fa fa-spin fa-spinner fa-2x"></i>
           </p>
         )}
+
         <ul className="list-unstyled m-0 ul-prod-list animate__animated animate__fadeIn">
           {products.map(({ item }) => (
             <ProductItem key={item.id} item={item}></ProductItem>

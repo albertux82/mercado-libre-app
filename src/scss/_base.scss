@@ -1,0 +1,242 @@
+html,
+body {
+    font-family: var(--font-poppins);
+    background-color: var(--bg-color);
+    font-size: 18px;
+    color: var(--black);
+}
+
+.container {
+    max-width: 1120px;
+}
+
+/* 01. SearchBar */
+.searchBar {
+    background-color: var(--yellow);
+
+    .btn-search {
+        background-color: var(--bg-color);
+        border: none;
+        padding: 0px 10px;
+    }
+
+    .input-search {
+        border: none;
+        border-radius: 2px;
+        padding: 10px;
+    }
+
+    .input-search::placeholder {
+        color: var(--gray-medium);
+        opacity: 1;
+        font-size: 18px;
+    }
+}
+
+
+/* 
+02. ProductsItem
+*/
+.ul-prod-list {
+    .wrapper {
+        background: white;
+
+        .info {
+            width: 60%;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .item {
+        border-bottom: 1px solid var(--border-color);
+        padding: 16px;
+        width: 100%;
+        position: relative;
+
+        .price {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .title {
+            margin-top: 16px;
+        }
+
+        .address {
+            font-size: 12px;
+            color: var(--gray-light);
+        }
+    }
+
+    .image {
+        margin-right: 16px;
+
+        img {
+            border-radius: 4px;
+        }
+    }
+}
+
+/* 
+03. ProductsDetails
+*/
+.p-card {
+    padding: 32px;
+    border: none;
+    border-radius: 4px;
+
+    .column {
+        margin-right: 16px;
+    }
+
+    img {
+        width: 680px;
+        border-radius: 4px;
+    }
+
+    .desc-title {
+        font-size: 28px;
+        padding-bottom: 16px;
+        display: block;
+        color: var(--gray-medium);
+    }
+
+    .desc-text {
+        font-size: 16px;
+        padding-top: 16px;
+        display: block;
+        color: var(--gray-medium);
+    }
+
+    .condition-sold {
+        margin-bottom: 16px;
+        color: var(--gray6);
+        font-size: 14px;
+
+        .condition {
+            text-transform: capitalize;
+        }
+    }
+
+
+    .title {
+        display: inline-block;
+        margin-bottom: 16px;
+        color: var(--black);
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .price {
+        display: inline-block;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        color: var(--black);
+        font-size: 46px;
+        line-height: 54px;
+    }
+
+    .btn-buy {
+        background-color: var(--blue);
+        color: white;
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 6px;
+        margin-top: 16px;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: #2968c8;
+            border-color: var(--blue);
+            color: white;
+        }
+    }
+}
+
+
+/*
+04. Image Overlay Effect
+*/
+figure {
+    margin: 0px
+}
+
+.hover01 figure {
+    overflow: hidden;
+
+    img {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+
+    &:hover img {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+}
+
+/* 
+05.Custom Scroll 
+*/
+@mixin custom-scroll-bar() {
+    &::-webkit-scrollbar {
+        border-radius: 10px;
+        height: 10px;
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: var(--border-color);
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 4px;
+    }
+}
+
+.scroll {
+    @include custom-scroll-bar();
+    max-height: 400px;
+    overflow: auto;
+    padding-right: 10px;
+}
+
+/*
+06. @media
+*/
+@media (max-width: 576px) {
+
+    /* ProductsItem */
+    .ul-prod-list {
+        .wrapper {
+            .info {
+                width: 100%;
+            }
+        }
+    }
+
+    /* ProductsDetails */
+    .p-card {
+        .description {
+            .title {
+                font-size: 18px;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .desc-text {
+                font-size: 14px;
+            }
+        }
+    }
+
+}

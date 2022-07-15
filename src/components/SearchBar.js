@@ -4,16 +4,19 @@ import { createBrowserHistory } from "history";
 import queryString from "query-string";
 
 export const SearchBar = () => {
+
   const location = useLocation();
   const { search = "" } = queryString.parse(location.search);
   const history = createBrowserHistory({ window });
   const navigate = useNavigate();
+
 
   const [formValues, handleInputChange] = useForm({
     searchText: search,
   });
   const { searchText } = formValues;
 
+  
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchText.trim().length <= 1) return;
@@ -27,7 +30,7 @@ export const SearchBar = () => {
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <NavLink className="navbar-brand" to="/">
-              <img src="../assets/images/Logo_ML.png" alt="Mercado Libre"></img>
+              <img src="../assets/images/Logo_ML.png" alt="Mercado Libre" title="Mercado Libre" width={53} height={36}></img>
             </NavLink>
 
             <form onSubmit={handleSearch} className="col ms-2" role="search">
@@ -49,7 +52,8 @@ export const SearchBar = () => {
                 >
                   <img
                     src="../assets/images/ic_Search.png"
-                    alt="icon-search"
+                    alt="icon-search" title="Search"
+                    width={18} height={18}
                   ></img>
                 </button>
               </div>
