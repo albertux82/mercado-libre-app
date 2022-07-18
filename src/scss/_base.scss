@@ -10,9 +10,32 @@ body {
     max-width: 1120px;
 }
 
+.breadcrumb {
+    margin-bottom:16px;
+    li {
+        font-size: 14px;
+
+        &:after {
+            content: "\f105";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            padding: 0px 8px;
+        }
+
+        &:last-child {
+            font-weight: 600
+        }
+
+        &:last-child::after {
+            content: ""
+        }
+    }
+}
+
 /* 01. SearchBar */
 .searchBar {
     background-color: var(--yellow);
+    margin-bottom:16px;
 
     .btn-search {
         background-color: var(--bg-color);

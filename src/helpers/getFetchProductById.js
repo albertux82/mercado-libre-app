@@ -4,6 +4,7 @@ export const getFetchProductById = async (id) => {
     const url = `https://api.mercadolibre.com/items/${id}`;
     const resp = await fetch(url);
     const data = await resp.json();
+    console.log(data);
 
     if(data.error){
       return data

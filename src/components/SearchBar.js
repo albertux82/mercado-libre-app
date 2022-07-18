@@ -26,7 +26,7 @@ export const SearchBar = () => {
 
   return (
     <>
-      <header className="p-3 mb-4 border-bottom searchBar">
+      <header className="p-2 border-bottom searchBar">
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <NavLink className="navbar-brand" to="/">
