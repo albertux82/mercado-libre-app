@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HomePage} from './pages/HomePage';
-import { SearchBar, ProductsList, ProductDetail} from './components';
+import { ProductDetail} from './pages/ProductDetail';
 import './App.scss';
 
 export const App = () => {
@@ -9,19 +9,11 @@ export const App = () => {
     <>
       {/* <React.StrictMode> */}
       <BrowserRouter>
-        <SearchBar></SearchBar>
-
-        <section id="main">
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<HomePage></HomePage>}></Route>
-              <Route path="/items" element={<ProductsList></ProductsList>}></Route>
-              <Route path="/items/:id" element={<ProductDetail></ProductDetail>}></Route>
-
-              <Route path="*" element={<Navigate to="/"></Navigate>}></Route>
-            </Routes>
-          </div>
-        </section>
+        <Routes>
+          <Route path="/" element={<HomePage></HomePage>}></Route>
+          <Route path="/items" element={<HomePage></HomePage>}></Route>
+          <Route path="/items/:id" element={<ProductDetail></ProductDetail>}></Route>
+        </Routes>
       </BrowserRouter>
       {/* </React.StrictMode> */}
     </>

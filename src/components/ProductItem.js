@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { formatNumber } from "../helpers/formatNumber";
+import { formatNumber } from "../helpers/utils";
 
 export const ProductItem = (product) => {
   return (
