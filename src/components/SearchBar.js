@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate, NavLink } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import queryString from "query-string";
-import { getFetchProducts } from "../helpers/getFetchProducts";
+import { getFetchProducts } from "../helpers";
 
 export const SearchBar = ({ onSearchProduct }) => {
   const history = createBrowserHistory({ window });

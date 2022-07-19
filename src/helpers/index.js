@@ -1,4 +1,4 @@
-export * from './getFetchProducts';
 export * from './getFetchProductById';
-export * from './utils';
+export * from './getFetchProducts';
 export * from './settings';
+export * from './utils';
