@@ -1,5 +1,4 @@
-import { API_URL } from "./settings";
-import { filterCategory} from './utils'
+import { API_URL, filterCategory } from "../helpers";
 
 export const getFetchProducts = async (itemprod) => {
   const url = `${API_URL}/sites/MLA/search?q=${itemprod}&limit=4`;

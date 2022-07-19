@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { getFetchProductById } from "../helpers/getFetchProductById";
+import { getFetchProductById } from "../helpers";
 
 export const useFetchProductsById = (id) => {
   const [product, setProduct] = useState({});

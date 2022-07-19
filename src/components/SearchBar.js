@@ -4,7 +4,7 @@ import { createBrowserHistory } from "history";
 import queryString from "query-string";
 import { getFetchProducts } from "../helpers/getFetchProducts";
 
-export const SearchBar = ({ onNewInputValue }) => {
+export const SearchBar = ({ onSearchProduct }) => {
   const history = createBrowserHistory({ window });
   const location = useLocation();
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ export const SearchBar = ({ onNewInputValue }) => {
 
   const getProducts = async () => {
     const newProds = await getFetchProducts(input);
-    onNewInputValue(newProds);
+    onSearchProduct(newProds);
   };
 
   //3) Si el (input o "q") contiene algun valor se hace la petición

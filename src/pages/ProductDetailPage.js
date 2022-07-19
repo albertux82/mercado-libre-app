@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { formatNumber } from "../helpers/utils";
-import { useFetchProductsById } from "../hooks/useFetchProductsById";
+import { useFetchProductsById } from "../hooks";
 import { SearchBar } from "../components/SearchBar";
 
-export const ProductDetail = () => {
+export const ProductDetailPage = () => {
   const { id } = useParams();
   
   //Usamos el Hook para hacer la petición y traer el producto
@@ -11,7 +11,7 @@ export const ProductDetail = () => {
 
   return (
     <>
-      <SearchBar onNewInputValue={()=>{}}></SearchBar>
+      <SearchBar onSearchProduct={()=>{}}></SearchBar>
 
       {
         isLoading && <p className="p4 text-center"><i className="fa fa-spin fa-spinner fa-2x"></i></p>

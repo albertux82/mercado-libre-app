@@ -1,4 +1,5 @@
-import { API_URL } from "./settings";
+import { API_URL } from "../helpers";
+
 export const getFetchProductById = async (id) => {
   const url = `${API_URL}/items/${id}`;
   const resp = await fetch(url);
